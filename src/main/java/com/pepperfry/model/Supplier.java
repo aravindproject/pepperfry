@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class Supplier {
 	
 	@Id
-	int supplierId;
+    String supplierId;
 	String supplierName;
 	String supplierAddress;
 	
@@ -21,10 +21,10 @@ public class Supplier {
 	public void setSupplierAddress(String supplierAddress) {
 		this.supplierAddress = supplierAddress;
 	}
-	public int getSupplierId() {
+	public String getSupplierId() {
 		return supplierId;
 	}
-	public void setSupplierId(int supplierId) {
+	public void setSupplierId(String supplierId) {
 		this.supplierId = supplierId;
 	}
 	public String getSupplierName() {

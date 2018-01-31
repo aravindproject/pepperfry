@@ -13,14 +13,14 @@ import org.springframework.web.multipart.MultipartFile;
 public class Product {
 
 	@Id
-	private Integer pid;
+	private String pid;
 	private String pname;
 	private String description;
 	private long price;
 	@Transient
 	private MultipartFile image;
 	private String supplierId;
-	private Integer cid;
+	private String cid;
 
 	public String getSupplierId() {
 		return supplierId;
@@ -30,11 +30,11 @@ public class Product {
 		this.supplierId = supplierId;
 	}
 
-	public Integer getPid() {
+	public String getPid() {
 		return pid;
 	}
 
-	public void setPid(Integer pid) {
+	public void setPid(String pid) {
 		this.pid = pid;
 	}
 
@@ -70,11 +70,11 @@ public class Product {
 		this.image = image;
 	}
 
-	public Integer getCid() {
+	public String getCid() {
 		return cid;
 	}
 
-	public void setCid(Integer cid) {
+	public void setCid(String cid) {
 		this.cid = cid;
 	}
 

@@ -30,7 +30,7 @@ public class SupplierController {
 	@RequestMapping("saveSupplier")
 	public ModelAndView saveSupplier(Supplier supplier)
 	{
-        supplierService.createorupdate(supplier);
+        supplierService.saveSupplier(supplier);
         
         return new ModelAndView("redirect:/homeadmin");		
 	}
@@ -39,16 +39,16 @@ public class SupplierController {
 	public ModelAndView addSupplier(@ModelAttribute("command") Supplier supplier, BindingResult result){
 		
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("suppliers", supplierService.getsupplier());
+		model.put("suppliers", supplierService.getAllSuppliers());
 		
 		return new ModelAndView("supplierCrud",model);
 	}
 	@RequestMapping(value = "/deleteSupplier", method = RequestMethod.GET)
 	public ModelAndView deletesupplier(@ModelAttribute("command")  Supplier supplier, @RequestParam("supplierId")String id,
 			BindingResult result) {
-		supplierService.delete(id);
+		supplierService.deleteSupplier(id);
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("suppliers",  supplierService.getsupplier());
+		model.put("suppliers",  supplierService.getAllSuppliers());
 		return new ModelAndView("supplierCrud", model);
 	}
 	
@@ -56,13 +56,13 @@ public class SupplierController {
 	public ModelAndView editsupplier(@ModelAttribute("command") Supplier supplier, @RequestParam("supplierId")String id,
 			BindingResult result) {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("supplier",  supplierService.getSupplier(id));
-		model.put("suppliers",  supplierService.getsupplier());
+		model.put("suppliers",  supplierService.getAllSuppliers());
+		model.put("suppliers",  supplierService.getAllSuppliers());
 		return new ModelAndView("supplierCrud", model);
 	}
 	
 	@RequestMapping(value="/suppliers", method = RequestMethod.GET)
-	public ArrayList<Supplier> getsuppliers() {
-		return supplierService.getsupplier();
+	public ArrayList<Supplier> getAllsuppliers() {
+		return supplierService.getAllSuppliers();
 	}
 }

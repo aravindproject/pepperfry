@@ -1,8 +1,10 @@
+
 package com.pepperfry.controller;
 
 import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,7 +37,7 @@ public class ProductController {
 	@Autowired
 	private CategoryService categoryService;
 
-	String path = "E:\\Nit\\New folder\\shopping\\src\\main\\webapp\\resources\\";
+	String path = "C:\\Users\\divi\\Documents\\GitHub\\pepperfry\\src\\main\\webapp\\resources\\images\\";
 
 	@RequestMapping("productcrud")
 	public ModelAndView producthome(@ModelAttribute("command") Product product) {
@@ -51,17 +53,17 @@ public class ProductController {
 		model.put("category", new Category());
 		model.put("productList", this.productService.getproduct());
 		model.put("categoryList", this.categoryService.getcategory());
-		model.put("supplierList", this.supplierService.getsupplier());
+		model.put("supplierList", this.supplierService.getAllSuppliers());
 
 		return new ModelAndView("productcrud", model);
 	}
 
 	@RequestMapping("saveProduct")
-	public ModelAndView saveCategory(Product product) 
+	public ModelAndView savecategory(Product product) 
 	{
 		productService.createorupdate(product);
 		MultipartFile image = product.getImage();
-		FileUtil.upload(path, image, product.getPid() + ".jpg");
+		FileUtil.upload (path, image, product.getPid() + ".jpg");
 		return new ModelAndView("redirect:/homeadmin");
 	}
 
