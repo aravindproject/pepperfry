@@ -13,8 +13,7 @@ public interface SupplierService {
 
 	public void deleteSupplier(String supplierId);
 
-	public Object getsupplier();
+ 
 
-	void deleteSupplier(int supplierId);
-
+ 
 }

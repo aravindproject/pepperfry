@@ -21,26 +21,22 @@ public class SupplierController {
 	@Autowired
 	private SupplierService supplierService;
 	
-	@RequestMapping("supplierCrud")
-	public ModelAndView supplierHome(@ModelAttribute("command") Supplier supplier){
-		
-		return new ModelAndView("supplierCrud");
-	}
 	
+
+
 	@RequestMapping("saveSupplier")
 	public ModelAndView saveSupplier(Supplier supplier)
 	{
         supplierService.saveSupplier(supplier);
         
-        return new ModelAndView("redirect:/homeadmin");		
+        return new ModelAndView("redirect:/adminHome");		
 	}
 
 	@RequestMapping("addSupplier")
 	public ModelAndView addSupplier(@ModelAttribute("command") Supplier supplier, BindingResult result){
 		
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("suppliers", supplierService.getAllSuppliers());
-		
+		model.put("suppliers", supplierService.getAllSuppliers());		
 		return new ModelAndView("supplierCrud",model);
 	}
 	@RequestMapping(value = "/deleteSupplier", method = RequestMethod.GET)

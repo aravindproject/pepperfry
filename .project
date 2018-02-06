@@ -34,36 +34,4 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/java/com/pepperfry/dao/CategoryDAO.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/dao/CategoryDAO.java</location>
-		</link>
-		<link>
-			<name>src/main/java/com/pepperfry/dao/CategoryImp.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/dao/CategoryImp.java</location>
-		</link>
-		<link>
-			<name>src/main/java/com/pepperfry/dao/ProductDAO.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/dao/ProductDAO.java</location>
-		</link>
-		<link>
-			<name>src/main/java/com/pepperfry/dao/ProductImp.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/dao/ProductImp.java</location>
-		</link>
-		<link>
-			<name>src/main/java/com/pepperfry/service/ProductService.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/service/ProductService.java</location>
-		</link>
-		<link>
-			<name>src/main/java/com/pepperfry/service/ProductServiceImp.java</name>
-			<type>1</type>
-			<location>D:/shopping/src/main/java/shopping/service/ProductServiceImp.java</location>
-		</link>
-	</linkedResources>
 </projectDescription>

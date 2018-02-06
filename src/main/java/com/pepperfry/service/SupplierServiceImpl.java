@@ -19,40 +19,31 @@ public class SupplierServiceImpl implements SupplierService{
 		// TODO Auto-generated method stub
 		supplierDAO.saveSupplier(obj);
 	}
-
-	public Supplier getSupplierById(int supplierId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+ 
 	@Override
 	public ArrayList<Supplier> getAllSuppliers() {
 		// TODO Auto-generated method stub
-		return null;
+		return supplierDAO.getAllSuppliers();
 	}
 
-	@Override
-	public void deleteSupplier(int supplierId) {
-		// TODO Auto-generated method stub
-		
-	}
+	 
 
 	@Override
 	public Supplier getSupplierById(String supplierId) {
 		// TODO Auto-generated method stub
-		return null;
+		return supplierDAO.getSupplierById(supplierId);
 	}
 
 	@Override
 	public void deleteSupplier(String supplierId) {
 		// TODO Auto-generated method stub
-		
+		supplierDAO.deleteSupplier(supplierId);
 	}
 
-	@Override
-	public Object getsupplier() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	 
+
+ 
+
+	 
 
 }

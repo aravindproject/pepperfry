@@ -12,18 +12,18 @@
      <form:form method="POST" action="saveSupplier">
 		<table>
 			<tr>
-				<td><form:label path="id" cssStyle="padding:10px">Supplier Id &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</form:label></td>
-				<td><form:input path="id" cssStyle="width:60%" value="${supplier.id}" /></td>
+				<td><form:label path="supplierId" cssStyle="padding:10px">Supplier Id &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</form:label></td>
+				<td><form:input path="supplierId" cssStyle="width:60%" value="${supplier.supplierId}" /></td>
 			</tr>
 			
 			<tr>
-				<td><form:label path="name" cssStyle="padding:10px">Supplier Name &nbsp&nbsp&nbsp&nbsp&nbsp:</form:label></td>
-				<td><form:input path="name" cssStyle="width:60%" value="${supplier.name}" /></td>
+				<td><form:label path="supplierName" cssStyle="padding:10px">Supplier Name &nbsp&nbsp&nbsp&nbsp&nbsp:</form:label></td>
+				<td><form:input path="supplierName" cssStyle="width:60%" value="${supplier.supplierName}" /></td>
 			</tr>
 			
 			<tr>
-				<td><form:label path="address" cssStyle="padding:10px">Supplier Address :</form:label></td>
-				<td><form:input path="address" cssStyle="width:60%" value="${supplier.address}" /></td>
+				<td><form:label path="supplierAddress" cssStyle="padding:10px">Supplier Address :</form:label></td>
+				<td><form:input path="supplierAddress" cssStyle="width:60%" value="${supplier.supplierAddress}" /></td>
 			</tr>
 		</table>
 		<br><br>
@@ -31,6 +31,8 @@
 		<input name="reset" type="reset" />
 	</form:form>
 	</div>
+	
+	 
 <div align="center">	
 	 <c:if test="${!empty suppliers}">
  <table align="center" border="1">
@@ -42,17 +44,17 @@
   </tr>
   <c:forEach items="${suppliers}" var="supplier">
    <tr>
-    <td><c:out value="${supplier.id}"/></td>
-    <td><c:out value="${supplier.name}"/></td>
-    <td><c:out value="${supplier.address}"/></td>
-    <td align="center"><a href="editSupplier?supplierId=${supplier.id}">Edit</a> | <a href="deleteSupplier?supplierId=${supplier.id}">Delete</a></td>
+    <td><c:out value="${supplier.supplierId}"/></td>
+    <td><c:out value="${supplier.supplierName}"/></td>
+    <td><c:out value="${supplier.supplierAddress}"/></td>
+    <td align="center"><a href="editSupplier?supplierId=${supplier.supplierId}">Edit</a> | <a href="deleteSupplier?supplierId=${supplier.supplierId}">Delete</a></td>
    </tr>
   </c:forEach>
  </table>
 </c:if>
 </div>
 	<div id="footer-row1">
-	     <h4 class="copyright"> &copy This Page Owner is BalaG</h4>
+	     <h4 class="copyright"> &copy This Page Owner is Aravind</h4>
 	 </div>
  </body>
 </html>

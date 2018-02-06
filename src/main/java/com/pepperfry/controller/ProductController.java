@@ -85,7 +85,7 @@ public class ProductController {
 		model.put("supplier", new Supplier());
 		model.put("category", new Category());
 		model.put("categoryList", this.categoryService.getcategory());
-		model.put("supplierList", this.supplierService.getsupplier());
+		model.put("supplierList", this.supplierService.getAllSuppliers());
 		model.put("product", productService.getproduct(pid));
 		model.put("productList", productService.getproduct());
 		return new ModelAndView("productcrud", model);

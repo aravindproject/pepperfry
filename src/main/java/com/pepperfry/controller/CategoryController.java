@@ -33,7 +33,7 @@ public class CategoryController {
 	public ModelAndView saveCategory(Category category)
 	{
         categoryService.createorupdate(category);
-        return new ModelAndView("redirect:/homeadmin");		
+        return new ModelAndView("redirect:/adminHome");		
 	}
 	
 	@RequestMapping("addCategory")
@@ -45,7 +45,7 @@ public class CategoryController {
      }
 	
 	@RequestMapping(value = "/deleteCategory", method = RequestMethod.GET)
-	public ModelAndView deleteCategory(@ModelAttribute("command") Category category,@RequestParam("categoryCId")Integer cid,
+	public ModelAndView deleteCategory(@ModelAttribute("command") Category category,@RequestParam("categoryCId")String cid,
 			BindingResult result) {
 		categoryService.delete(cid);
 		Map<String, Object> model = new HashMap<String, Object>();
@@ -54,7 +54,7 @@ public class CategoryController {
 	}
 	
 	@RequestMapping(value = "/editCategory", method = RequestMethod.GET)
-	public ModelAndView editCategory(@ModelAttribute("command") Category category,@RequestParam("categoryCId")Integer cid, 
+	public ModelAndView editCategory(@ModelAttribute("command") Category category,@RequestParam("categoryCId")String cid, 
 			BindingResult result) {
 		Map<String, Object> model = new HashMap<String, Object>();
 		model.put("category",  categoryService.getcategory(cid));

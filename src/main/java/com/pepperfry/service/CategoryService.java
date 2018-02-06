@@ -6,7 +6,7 @@ import com.pepperfry.model.Category;
 public interface CategoryService {
 
 	public void createorupdate(Category obj);
-	public void delete(Integer cid);
-	public Category getcategory(Integer cid);
+	public void delete(String cid);
+	public Category getcategory(String cid);
 	public ArrayList<Category> getcategory();
 }

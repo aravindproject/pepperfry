@@ -20,13 +20,13 @@ public class CategoryServiceImp implements CategoryService {
 	}
 
 	@Override
-	public void delete(Integer cid) {
+	public void delete(String cid) {
 		// TODO Auto-generated method stub
 		CategoryDAO.delete(cid);
 	}
 
 	@Override
-	public Category getcategory(Integer cid) {
+	public Category getcategory(String cid) {
 		// TODO Auto-generated method stub
 		return CategoryDAO.getcategory(cid);
 	}

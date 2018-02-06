@@ -29,7 +29,7 @@ public class CategoryImp implements CategoryDAO {
 
 	@Override
 	@Transactional
-	public void delete(Integer cid) {
+	public void delete(String cid) {
 		// TODO Auto-generated method stub
 		Session s = sessionFactory.openSession();
 		org.hibernate.Transaction tx = s.beginTransaction();
@@ -41,7 +41,7 @@ public class CategoryImp implements CategoryDAO {
 
 	@Override
 	@Transactional
-	public Category getcategory(Integer cid) {
+	public Category getcategory (String cid) {
 		// TODO Auto-generated method stub
 		Session s = sessionFactory.openSession();
 		org.hibernate.Transaction tx = s.beginTransaction();
