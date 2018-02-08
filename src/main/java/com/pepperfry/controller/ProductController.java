@@ -36,9 +36,10 @@ public class ProductController {
 
 	@Autowired
 	private CategoryService categoryService;
+	String path="C:\\Users\\Admin\\Documents\\GitHub\\pepperfry\\src\\main\\webapp\\resources\\images\\";
 
-	String path = "C:\\Users\\divi\\Documents\\GitHub\\pepperfry\\src\\main\\webapp\\resources\\images\\";
 
+	
 	@RequestMapping("productcrud")
 	public ModelAndView producthome(@ModelAttribute("command") Product product) {
 		return new ModelAndView("productcrud");
@@ -64,7 +65,7 @@ public class ProductController {
 		productService.createorupdate(product);
 		MultipartFile image = product.getImage();
 		FileUtil.upload (path, image, product.getPid() + ".jpg");
-		return new ModelAndView("redirect:/homeadmin");
+		return new ModelAndView("redirect:/adminHome");
 	}
 
 	@RequestMapping(value = "/deleteProduct", method = RequestMethod.GET)

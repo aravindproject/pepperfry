@@ -45,32 +45,22 @@ table {
 <title>SUPPLIER CRUD PAGE</title>
 </head>
 <body>
-	<div class="row">
+	<!-- Admin Menu -->
 
-		<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Furniture Shopping</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="homeadmin">Home </a></li>
-				<li><a href="addSupplier">Add Supplier</a></li>
-				<li><a href="addCategory">Category</a></li>
-				<li class="active"><a href="product">Product</a></li>
-			</ul>
-		<ul class="nav navbar-nav navbar-right">
-		<li><a href="">
-						<span class="glyphicon glyphicon-user">
-							<b style="color:blue">${admin}</b></a>
-						</span>
-					</li> 
-					<li><a href="logout"><span class="glyphicon glyphicon-log-out"></span>
-							Logout</a></li>
-							</ul>
-		</div>
-
-		</nav>
-	</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Pepperfry</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="#">Home</a></li>
+    <li class="active"><a href="product">Products</a></li>
+      
+      <li><a href="addCategory">Category</a></li>
+      <li><a href="addSupplier">Supplier</a></li>
+    </ul>
+  </div>
+</nav>
 
 	<h2>ADD PRODUCT</h2>
 	<br>
