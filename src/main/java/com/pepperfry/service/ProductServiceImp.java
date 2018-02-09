@@ -22,14 +22,14 @@ public class ProductServiceImp implements ProductService{
 	}
 
 	@Override
-	public void delete(Integer pid) 
+	public void delete(String pid) 
 	{
 	  // TODO Auto-generated method stub
 	  productDAO.delete(pid);
 	}
 
 	@Override
-	public Product getproduct(Integer pid) 
+	public Product getproduct(String pid) 
 	{
 		// TODO Auto-generated method stub
 		return productDAO.getproduct(pid);

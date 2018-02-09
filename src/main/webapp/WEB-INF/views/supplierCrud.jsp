@@ -22,17 +22,24 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Pepperfry</a>
+      <a class="navbar-brand" href="#">PepperFry.Com</a>
     </div>
     <ul class="nav navbar-nav">
-      <li ><a href="#">Home</a></li>
-    <li ><a href="product">Products</a></li>
-      
-      <li ><a href="addCategory">Category</a></li>
-      <li class="active"><a href="addSupplier">Supplier</a></li>
+      <li class="active"><a href="adminHome">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="product">Add Product</a></li>
+          <li><a href="listAllProducts">View All Products</a></li>
+          <li><a href="product">Update Product Details</a></li>
+        <li><a href="product">Delete Product</a></li>
+
+        </ul>
+      </li>
+      <li><a href="addSupplier">Supplier</a></li>
+      <li><a href="addCategory">Category</a></li>
     </ul>
   </div>
-</nav>
+</nav> 
 
 	<h2> ADD SUPPLIER </h2>	
 	<br>

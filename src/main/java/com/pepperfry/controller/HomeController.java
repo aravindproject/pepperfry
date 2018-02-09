@@ -28,11 +28,7 @@ public class HomeController {
 	public ModelAndView index(){
 		return new ModelAndView("index");
 	}
-
-	@RequestMapping("home")
-	public ModelAndView func(){
-		return new ModelAndView("test");
-	}
+ 
 	
 	@RequestMapping("adminHome")
 	public ModelAndView adminHome(){

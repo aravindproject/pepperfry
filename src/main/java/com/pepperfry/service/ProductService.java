@@ -7,7 +7,7 @@ import com.pepperfry.model.Product;
 public interface ProductService {
 
 	public void createorupdate(Product obj);
-	public void delete(Integer pid);
-	public Product getproduct(Integer pid);
+	public void delete(String pid);
+	public Product getproduct(String pid);
 	public ArrayList<Product> getproduct();
 }

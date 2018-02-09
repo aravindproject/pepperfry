@@ -54,21 +54,27 @@ table {
 <body>
 
 
-	<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Pepperfry</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="product">Products</a></li>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PepperFry.Com</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="adminHome">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="product">Add Product</a></li>
+          <li><a href="listAllProducts">View All Products</a></li>
+          <li><a href="product">Update Product Details</a></li>
+        <li><a href="product">Delete Product</a></li>
 
-			<li class="active"><a href="addCategory">Category</a></li>
-			<li><a href="addSupplier">Supplier</a></li>
-		</ul>
-	</div>
-	</nav>
-
+        </ul>
+      </li>
+      <li><a href="addSupplier">Supplier</a></li>
+      <li class="active"><a href="addCategory">Category</a></li>
+    </ul>
+  </div>
+</nav> 
 
 
 	<h2>ADD Category</h2>

@@ -38,7 +38,7 @@ public class ProductImp implements ProductDAO {
 	}
 
 	@Override
-	public void delete(Integer pid) 
+	public void delete(String pid) 
 	{
 		// TODO Auto-generated method stub
         Session s= sessionFactory.openSession();
@@ -49,7 +49,7 @@ public class ProductImp implements ProductDAO {
 	}
 
 	@Override
-	public Product getproduct(Integer pid) 
+	public Product getproduct(String pid) 
 	{
 		// TODO Auto-generated method stub
 		Session s= sessionFactory.openSession();

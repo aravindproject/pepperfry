@@ -70,7 +70,7 @@ public class ProductController {
 
 	@RequestMapping(value = "/deleteProduct", method = RequestMethod.GET)
 	public ModelAndView deleteproduct(@ModelAttribute("command") Product product,
-			@RequestParam("productPid") Integer pid, BindingResult result) 
+			@RequestParam("productPid") String pid, BindingResult result) 
 	{
 		productService.delete(pid);
 		Map<String, Object> model = new HashMap<String, Object>();
@@ -79,7 +79,7 @@ public class ProductController {
 	}
 
 	@RequestMapping(value = "/editProduct", method = RequestMethod.GET)
-	public ModelAndView editproduct(@ModelAttribute("command") Product product, @RequestParam("productPid") Integer pid,
+	public ModelAndView editproduct(@ModelAttribute("command") Product product, @RequestParam("productPid") String pid,
 			BindingResult result)
 	{
 		Map<String, Object> model = new HashMap<String, Object>();
