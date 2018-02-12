@@ -74,4 +74,8 @@ public class User {
 		public void setEnabled(boolean enabled) {
 			this.enabled = enabled;
 		}
+		public User getuser(String name2) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
