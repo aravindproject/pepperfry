@@ -15,15 +15,15 @@ public class Category {
 	@Id
 	@Column(name="cid")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer cid;
+	private String cid;
 	
 	private String cname;
 	private String description;
 	
-	public Integer getCid() {
+	public String getCid() {
 		return cid;
 	}
-	public void setCid(Integer cid) {
+	public void setCid(String cid) {
 		this.cid = cid;
 	}
 
