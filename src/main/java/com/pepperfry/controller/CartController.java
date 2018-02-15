@@ -1,11 +1,7 @@
 package com.pepperfry.controller;
 
-
-
 import java.security.Principal;
 import java.util.List;
-
-import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,36 +10,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.pepperfry.dao.CartDAO;
 import com.pepperfry.dao.CartItemDAO;
-import com.pepperfry.dao.ProductDAO;
-import com.pepperfry.model.Cart;
+import com.pepperfry.dao.UserDAO;
 import com.pepperfry.model.CartItem;
 import com.pepperfry.model.Product;
 import com.pepperfry.model.User;
 
 
+
 @Controller
-public class CartController<cartItemDAO> {
+public class CartController<ProductDAO, CartDAO, Cart> {
 
 	@Autowired
-	private User userDAO;
+	private UserDAO userDAO;
 
-	@Autowired
-	private CartItemDAO cartItemDAO;
-	
 	@Autowired
 	private ProductDAO productDAO;
-	
-	@Autowired
-	private CartDAO cartDAO;
 	
 	@RequestMapping(value = ("/addtocart"), method = RequestMethod.GET)
 	public ModelAndView addtocart(@RequestParam("productPid") String pid,Principal principal)
 	{
 		User user= userDAO.getuser(principal.getName());
-		Cart cart= user.getCart();
-		Product product = productDAO.getproduct(pid);
+		com.pepperfry.model.Cart cart= user.getCart();
+		Product product = ((com.pepperfry.dao.ProductDAO) productDAO).getproduct(pid);
 		List<CartItem>cartItems= cart.getCartItem();
 		
 		  for (int i=0; i<cartItems.size(); i++)
@@ -54,8 +43,8 @@ public class CartController<cartItemDAO> {
 	                cartItem.setName(product.getPname());
 	                cartItem.setPrice(product.getPrice());
 	                cartItem.setQuantity(cartItem.getQuantity()+1);
-	                cartItem.setTotalprice(product.getPrice()*cartItem.getQuantity());
-	                cartItemDAO.addCart(cartItem);
+	                cartItem.setTotalPrice(product.getPrice());
+	                CartItemDAO.addCart(cartItem);
 	          }
 	      }
 		  
@@ -64,10 +53,10 @@ public class CartController<cartItemDAO> {
 	      cartItem.setName(product.getPname());
 	      cartItem.setPrice(product.getPrice());
 	      cartItem.setQuantity(1);
-	      cartItem.setTotalprice(product.getPrice()*cartItem.getQuantity());
+	      cartItem.setTotalPrice(product.getPrice());
 	      cartItem.setCart(cart);
-	      cartItemDAO.addCart(cartItem);
+	      CartItemDAO.addCart(cartItem);
 	      	
-	      return new ModelAndView("viewproduct");
+	      return new ModelAndView("listAllProuducts");
 	}
 }

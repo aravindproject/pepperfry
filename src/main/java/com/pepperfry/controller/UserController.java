@@ -25,7 +25,7 @@ public class UserController {
 	public ModelAndView saveUser(User user)
 	{
 	    userService.save(user);
-	    return new ModelAndView("redirect:/index");
+	    return new ModelAndView("redirect:/");
 	}
 	
 	@RequestMapping("cart")
@@ -33,4 +33,11 @@ public class UserController {
 	{
 		return new ModelAndView("Cart");
 	}
+	
+	@RequestMapping("logout")
+	public ModelAndView logout()
+	{
+		return new ModelAndView("logout");
+	}
+	
 }

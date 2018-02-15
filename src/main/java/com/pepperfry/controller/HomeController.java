@@ -35,6 +35,11 @@ public class HomeController {
 		return new ModelAndView("adminHome");
 	}
 	
+	@RequestMapping("userHome")
+	public ModelAndView userHome(){
+		return new ModelAndView("userHome");
+	}
+	
 
 	@RequestMapping("listAllProducts")
 	public ModelAndView listAllProducts(){

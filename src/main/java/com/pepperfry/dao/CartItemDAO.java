@@ -9,7 +9,10 @@ import com.pepperfry.model.CartItem;
 
 public interface CartItemDAO {
 
-	public void addCart(CartItem cartItem);
+	public static void addCart(CartItem cartItem) {
+		// TODO Auto-generated method stub
+		
+	}
 	public void removeCart(CartItem cartItem);
 	public void removeAllCart(CartItem cart);
 	public List<CartItem> list();

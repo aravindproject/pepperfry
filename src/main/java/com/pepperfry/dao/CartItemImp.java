@@ -16,7 +16,6 @@ public class CartItemImp implements CartItemDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	@Override
 	@Transactional
 	public void addCart(CartItem cartItem)
 	{

@@ -17,7 +17,7 @@ public class User {
 		private String email;
 		private String phn;
 		private String roll="ROLE_USER";
-		private boolean enabled;
+		private boolean enabled=true;
 		
 		@OneToOne
 	    @JoinColumn(name = "cartid")

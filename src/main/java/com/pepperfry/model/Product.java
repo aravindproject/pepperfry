@@ -93,6 +93,7 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name = "supplierId", nullable = false, updatable = false, insertable = false)
 	private Supplier supplier;
+	public String getPrice;
 
 	public Supplier getSupplier() {
 		return supplier;

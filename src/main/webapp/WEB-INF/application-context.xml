@@ -16,11 +16,13 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.pepperfry.model.Supplier</value>
-				
-				<value>com.pepperfry.model.Category</value>
-				
-				<value>com.pepperfry.model.Product</value>
+	<value>com.pepperfry.model.Supplier</value>
+	<value>com.pepperfry.model.Category</value>
+	<value>com.pepperfry.model.Product</value>
+	<value>com.pepperfry.model.Cart</value>
+	<value>com.pepperfry.model.CartItem</value>
+	<value>com.pepperfry.model.User</value>
+	<value>com.pepperfry.model.UserOrder</value>
 				
 			</list>
 		</property>

@@ -14,7 +14,7 @@ public class CartItemServiceImp implements CartItemService {
 	@Override
 	public void addCart(CartItem cartItem) {
 		// TODO Auto-generated method stub
-		cartItemDAO.addCart(cartItem);
+		CartItemDAO.addCart(cartItem);
 	}
 
 	@Override

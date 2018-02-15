@@ -15,7 +15,7 @@ public class UserOrder implements Serializable {
 
 	@Id
 	@GeneratedValue
-	private int userOrderId;
+	private String userOrderId;
 	
 	@OneToOne
     @JoinColumn(name = "cartid")
@@ -25,10 +25,10 @@ public class UserOrder implements Serializable {
     @JoinColumn(name = "username")
 	private User user;
 	
-	public int getUserOrderId() {
+	public String getUserOrderId() {
 		return userOrderId;
 	}
-	public void setUserOrderId(int userOrderId) {
+	public void setUserOrderId(String userOrderId) {
 		this.userOrderId = userOrderId;
 	}
 	public Cart getCart() {

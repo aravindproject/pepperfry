@@ -17,7 +17,7 @@ public class CartItem implements Serializable{
 
 	@Id
 	@GeneratedValue
-	private Integer Ciid;
+	private String Ciid;
 	
 	@ManyToOne
     @JoinColumn(name = "cartid")
@@ -29,13 +29,11 @@ public class CartItem implements Serializable{
 	
 	private String name;
 	private Long price;
-	private Integer quantity;
-	private Double totalprice;
-	
-	public Integer getCiid() {
+	private String quantity;
+	public String getCiid() {
 		return Ciid;
 	}
-	public void setCiid(Integer ciid) {
+	public void setCiid(String ciid) {
 		Ciid = ciid;
 	}
 	public Cart getCart() {
@@ -62,17 +60,25 @@ public class CartItem implements Serializable{
 	public void setPrice(Long price) {
 		this.price = price;
 	}
-	public Integer getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
+	public void setQuantity(String i) {
+		this.quantity = i;
+	
 	}
-	public Double getTotalprice() {
-		return totalprice;
+	public void setQuantity(int i) {
+		// TODO Auto-generated method stub
+		
 	}
-	public void setTotalprice(long l) {
-		this.totalprice = (double) l;
+	public void setTotalPrice(long price2) {
+		// TODO Auto-generated method stub
+		
 	}
+	
+		
+	}
+	
+	
 
-}
+
